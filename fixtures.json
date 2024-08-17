@@ -1,0 +1,82 @@
+[
+{
+    "model": "credit_system.makermodel",
+    "pk": 1,
+    "fields": {
+        "name": "ООО \"Делаем товары\"",
+        "created_at": "2024-08-16T23:44:02.614Z"
+    }
+},
+{
+    "model": "credit_system.makermodel",
+    "pk": 2,
+    "fields": {
+        "name": "ООО \"Лучшие вещи\"",
+        "created_at": "2024-08-16T23:44:30.855Z"
+    }
+},
+{
+    "model": "credit_system.productmodel",
+    "pk": 1,
+    "fields": {
+        "name": "Сервер",
+        "maker": 2,
+        "credit_application": 1,
+        "created_at": "2024-08-16T23:46:41.955Z"
+    }
+},
+{
+    "model": "credit_system.productmodel",
+    "pk": 2,
+    "fields": {
+        "name": "Микросхема",
+        "maker": 2,
+        "credit_application": 1,
+        "created_at": "2024-08-16T23:49:38.124Z"
+    }
+},
+{
+    "model": "credit_system.productmodel",
+    "pk": 3,
+    "fields": {
+        "name": "Компьютерный стол",
+        "maker": 1,
+        "credit_application": 1,
+        "created_at": "2024-08-16T23:56:38.216Z"
+    }
+},
+{
+    "model": "credit_system.contractmodel",
+    "pk": 1,
+    "fields": {
+        "description": "Инфо",
+        "file_url": "ссылка",
+        "created_at": "2024-08-16T23:45:52.165Z"
+    }
+},
+{
+    "model": "credit_system.contractmodel",
+    "pk": 2,
+    "fields": {
+        "description": "Нет",
+        "file_url": "ссылка",
+        "created_at": "2024-08-16T23:57:08.330Z"
+    }
+},
+{
+    "model": "credit_system.creditapplicationmodel",
+    "pk": 1,
+    "fields": {
+        "contract": 1,
+        "created_at": "2024-08-16T23:46:18.655Z"
+    }
+},
+{
+    "model": "credit_system.creditapplicationmodel",
+    "pk": 2,
+    "fields": {
+        "contract": 2,
+        "created_at": "2024-08-16T23:57:31.030Z"
+    }
+}
+]

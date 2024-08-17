@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+
+  wsgi:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: >
+      sh -c "python3 manage.py collectstatic --noinput &&
+             python3 manage.py makemigrations &&
+             python3 manage.py migrate &&
+             python3 manage.py initadmin &&
+             python3 manage.py loaddata fixtures.json &&
+             gunicorn config.wsgi:application --bind 0.0.0.0:8000 --access-logfile -"
+    volumes:
+      - ./logs/wsgi_docker/:/config/logs/
+    restart: always
+    ports:
+      - "8001:8000"
+
+  nginx:
+    build: ./nginx
+    ports:
+      - "8017:80"
+    restart: always
+    depends_on:
+      - wsgi
