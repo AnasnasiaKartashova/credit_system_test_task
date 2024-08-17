@@ -2,6 +2,7 @@
 *.DS_Store
 *.egg*
 /dist/
+.idea
 /.idea
 /docs/_build/
 /node_modules/
@@ -14,5 +15,4 @@ __pycache__/
 env/
 venv/
 .env
-/books/migrations/0*
-
+/credit_system/migrations/0*
