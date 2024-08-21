@@ -1,19 +1,32 @@
-*.pyc
-*.DS_Store
-*.egg*
-/dist/
-.idea
-/.idea
-/docs/_build/
-/node_modules/
-build/
-env
-/staticfiles/
-__pycache__/
-#src
+# CACHE
+**/.DS_Store
+**/__pycache__
+**/.ruff_cache
+
+# DATA
+**/.data
+**/.volumes
+**/static
+**/staticfiles
+**/**.sql
 *.sqlite*
-env/
-venv/
-.env
-/credit_system/migrations/0*
+
+# GIT
+**/.git
+
+# IDE
+**/.vs
+**/.vscode
+**/.idea
+
+# ENV
+**/.venv
+**/.env*
+
+# TESTS
+**/.pytest_cache
+**/.coverage
+
+#MIGRATIONS
+credit_system/migrations/0*
 

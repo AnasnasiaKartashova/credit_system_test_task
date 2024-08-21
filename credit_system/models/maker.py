@@ -1,9 +1,9 @@
 from django.db import models
+from credit_system.mixin_models.created_at_mixin_model import CreatedAtMixin
 
 
-class MakerModel(models.Model):
+class MakerModel(CreatedAtMixin, models.Model):
     name = models.CharField(max_length=255, verbose_name="Наименование")
-    created_at = models.DateTimeField(auto_now_add=True, verbose_name="Дата создания")
 
     def __str__(self):
         return self.name
