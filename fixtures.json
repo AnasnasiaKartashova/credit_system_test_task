@@ -50,7 +50,6 @@
     "pk": 1,
     "fields": {
         "description": "Инфо",
-        "file_url": "ссылка",
         "created_at": "2024-08-16T23:45:52.165Z"
     }
 },
@@ -59,7 +58,6 @@
     "pk": 2,
     "fields": {
         "description": "Нет",
-        "file_url": "ссылка",
         "created_at": "2024-08-16T23:57:08.330Z"
     }
 },

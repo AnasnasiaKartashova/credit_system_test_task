@@ -1,12 +1,11 @@
 from django.db import models
+from credit_system.mixin_models.created_at_mixin_model import CreatedAtMixin
 
 
-class ContractModel(models.Model):
+class ContractModel(CreatedAtMixin, models.Model):
     description = models.CharField(
         max_length=4048, verbose_name="Дополнительные сведения"
     )
-    file_url = models.CharField(max_length=4048, verbose_name="Ссылка на документ")
-    created_at = models.DateTimeField(auto_now_add=True, verbose_name="Дата создания")
 
     def __str__(self):
         return f"№{self.id}"
