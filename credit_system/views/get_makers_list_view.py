@@ -2,7 +2,7 @@ from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from credit_system.serializers.make_serializer import MakeSerializer
-from credit_system.services.credit_application_service import CreditApplicationsService
+from credit_system.services.maker_service import MakerService
 
 
 class MakersListView(APIView):
@@ -13,7 +13,7 @@ class MakersListView(APIView):
         Your have to pass contract_id in the url
         """
         try:
-            makers = CreditApplicationsService.get_list_maker_for_contract(contract_id)
+            makers = MakerService.get_list_maker_for_contract(contract_id)
             if makers:
 
                 serializer = MakeSerializer(makers, many=True)
